@@ -48,7 +48,7 @@ clone完成之后切换到仓库目录执行
 ```shell
 docker container run -d  --cap-add=NET_ADMIN --device=/dev/ppp -p 18443:8443 -p 10022:22 --rm -v /Users/xxx/fortivpn/config:/etc/openfortivpn/config:ro xuanyimo/docker-fortivpn-socks5
 ```
-# 添加公钥到/root/.ssh/authorized_keys
+4. 添加公钥到/root/.ssh/authorized_keys (为了mysql走ssh tunnel使用)
 
 ## License
 
