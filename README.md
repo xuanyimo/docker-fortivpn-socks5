@@ -39,7 +39,9 @@ NOTE: I only tested this image on Linux-based systems. It might not be working o
 2. 执行下面命令
 3. config文件为path/to/config
 
-```shell docker container run -d  --cap-add=NET_ADMIN --device=/dev/ppp -p 18443:8443 -p 10022:22 --rm -v /Users/xxx/fortivpn/config:/etc/openfortivpn/config:ro xuanyimo/docker-fortivpn-socks5```
+```shell
+docker container run -d  --cap-add=NET_ADMIN --device=/dev/ppp -p 18443:8443 -p 10022:22 --rm -v /Users/xxx/fortivpn/config:/etc/openfortivpn/config:ro xuanyimo/docker-fortivpn-socks5
+```
 # 添加公钥到/root/.ssh/authorized_keys
 
 ## License
