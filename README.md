@@ -14,6 +14,7 @@ NOTE: I only tested this image on Linux-based systems. It might not be working o
     port = 443
     username = foo
     password = bar
+    trusted-cert = c717f8f4a9c4169619618d690e83e9b086619fa3442fd5eac3453be9732a9b4a
     ```
 
 2. Run the following command to start the container.
@@ -35,6 +36,11 @@ NOTE: I only tested this image on Linux-based systems. It might not be working o
     $ ssh -o ProxyCommand="nc -x 172.17.0.2:8443 %h %p" foo@example.com
     ```
 # 补充
+clone完成之后切换到仓库目录执行
+`docker build -t xuanyimo/docker-fortivpn-socks5 .`
+`mkdir -p /Users/xxx/fortivpn/`
+`touch /Users/xxx/fortivpn/config`
+参考上面的配置内容，trusted-cert不变
 1. 编辑conifg更新安全码
 2. 执行下面命令
 3. config文件为path/to/config
