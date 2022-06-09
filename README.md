@@ -37,9 +37,13 @@ NOTE: I only tested this image on Linux-based systems. It might not be working o
     ```
 # 补充
 clone完成之后切换到仓库目录执行
+
 `docker build -t xuanyimo/docker-fortivpn-socks5 .`
+
 `mkdir -p /Users/xxx/fortivpn/`
+
 `touch /Users/xxx/fortivpn/config`
+
 参考上面的配置内容，trusted-cert不变
 1. 编辑conifg更新安全码
 2. 执行下面命令
