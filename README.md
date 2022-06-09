@@ -35,9 +35,10 @@ NOTE: I only tested this image on Linux-based systems. It might not be working o
     $ ssh -o ProxyCommand="nc -x 172.17.0.2:8443 %h %p" foo@example.com
     ```
 # 补充
-# 编辑conifg更新安全码
-# 执行下面命令
-docker container run -d  --cap-add=NET_ADMIN --device=/dev/ppp -p 18443:8443 -p 10022:22 --rm -v /Users/oker/fortivpn/config:/etc/openfortivpn/config:ro xuanyimo/docker-fortivpn-socks5
+编辑conifg更新安全码
+执行下面命令
+config文件为path/to/config
+docker container run -d  --cap-add=NET_ADMIN --device=/dev/ppp -p 18443:8443 -p 10022:22 --rm -v /Users/xxx/fortivpn/config:/etc/openfortivpn/config:ro xuanyimo/docker-fortivpn-socks5
 # 添加公钥到/root/.ssh/authorized_keys
 
 ## License
